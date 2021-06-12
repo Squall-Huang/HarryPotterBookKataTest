@@ -12,9 +12,15 @@ class HarryPotterKataTest {
     }
 
     @Test
-    fun buy_1_normal_price() {
+    fun `buy 1 normal price`() {
         buyBook("1")
         priceShouldBe(100)
+    }
+
+    @Test
+    fun `buy 2 different copies 5 percent discount`() {
+        buyBook("1","2")
+        priceShouldBe(190)
     }
 
     private fun priceShouldBe(expectedPrice: Int) {
