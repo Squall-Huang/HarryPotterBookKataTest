@@ -11,7 +11,7 @@ class Cart {
             return (books.sumOf { 100.toInt() } * 0.95).toInt()
 
         }
-        return 100
+        return books.sumOf { 100.toInt() }
     }
 
 }
