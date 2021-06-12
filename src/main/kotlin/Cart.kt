@@ -1,7 +1,7 @@
 class Cart {
 
     val books = mutableListOf<Book>()
-    val discountLookup = mapOf(1 to 1.0, 2 to 0.95)
+    val discountLookup = mapOf(1 to 1.0, 2 to 0.95, 3 to 0.9)
 
     fun add(book: Book) {
         books.add(book)
