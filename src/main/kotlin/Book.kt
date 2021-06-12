@@ -1,3 +1,3 @@
-class Book(isbn: String) {
+class Book(val isbn: String) {
 
 }
