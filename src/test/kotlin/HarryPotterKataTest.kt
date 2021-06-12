@@ -35,6 +35,12 @@ class HarryPotterKataTest {
         priceShouldBe(320)
     }
 
+    @Test
+    fun `buy 5 different copies 25 percent discount`() {
+        buyBook("1","2","3","4","5")
+        priceShouldBe(375)
+    }
+
     private fun priceShouldBe(expectedPrice: Int) {
         assertEquals(expectedPrice, cart.totalPrice())
     }
