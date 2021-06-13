@@ -19,25 +19,25 @@ class HarryPotterKataTest {
 
     @Test
     fun `buy 2 different copies 5 percent discount`() {
-        buyBook("1","2")
+        buyBook("1", "2")
         priceShouldBe(190)
     }
 
     @Test
     fun `buy 3 different copies 10 percent discount`() {
-        buyBook("1","2","3")
+        buyBook("1", "2", "3")
         priceShouldBe(270)
     }
 
     @Test
     fun `buy 4 different copies 20 percent discount`() {
-        buyBook("1","2","3","4")
+        buyBook("1", "2", "3", "4")
         priceShouldBe(320)
     }
 
     @Test
     fun `buy 5 different copies 25 percent discount`() {
-        buyBook("1","2","3","4","5")
+        buyBook("1", "2", "3", "4", "5")
         priceShouldBe(375)
     }
 
@@ -47,6 +47,14 @@ class HarryPotterKataTest {
         //1,2,3=>300*0.9=270
         //1=>100
         priceShouldBe(370)
+    }
+
+    @Test
+    fun `best discount`() {
+        buyBook("1", "1", "2", "2", "3", "3", "4", "5")
+        //1,2,3,4=>400*0.8
+        //1,2,3,5=>400*0.8
+        priceShouldBe(640)
     }
 
     private fun priceShouldBe(expectedPrice: Int) {
